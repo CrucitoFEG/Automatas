@@ -14,14 +14,12 @@ public class SistemaAcademico {
     }
 
     // --- OPERACIONES CON CURSOS ---
-    public boolean crearCurso(int numero, String nombre) {
+    public String crearCurso(int numero, String nombre) {
         if (cursos.containsKey(numero)) {
-            System.out.println("Error: Ya existe un curso con número " + numero);
-            return false;
+            return "<span style='color:red;'>Error: Ya existe un curso con número " + numero + "</span>";
         }
         cursos.put(numero, new Curso(numero, nombre));
-        System.out.println("✓ Curso creado: " + nombre + " (#" + numero + ")");
-        return true;
+        return "<span style='color:green;'>&#10003; Curso creado: " + nombre + " (#" + numero + ")</span>";
     }
 
     public Curso buscarCurso(int numero) {
@@ -29,65 +27,60 @@ public class SistemaAcademico {
     }
 
     // --- OPERACIONES CON ESTUDIANTES ---
-    public boolean crearEstudiante(int numero, String nombre, int numeroCurso) {
+    public String crearEstudiante(int numero, String nombre, int numeroCurso) {
         if (estudiantes.containsKey(numero)) {
-            System.out.println("Error: Ya existe un estudiante con número " + numero);
-            return false;
+            return "<span style='color:red;'>Error: Ya existe un estudiante con número " + numero + "</span>";
         }
-
-        // Verificar que el curso exista
         if (!cursos.containsKey(numeroCurso)) {
-            System.out.println("Error: No existe el curso #" + numeroCurso);
-            return false;
+            return "<span style='color:red;'>Error: No existe el curso #" + numeroCurso + "</span>";
         }
-
         estudiantes.put(numero, new Estudiante(numero, nombre, numeroCurso));
-        System.out.println("✓ Estudiante creado: " + nombre + " (#" + numero + ")");
-        return true;
+        return "<span style='color:green;'>&#10003; Estudiante creado: " + nombre + " (#" + numero + ")</span>";
     }
 
-    public Estudiante buscarEstudiante(int numero) {
+    public String buscarEstudiante(int numero) {
         Estudiante estudiante = estudiantes.get(numero);
         if (estudiante == null) {
-            System.out.println("No se encontró estudiante con número: " + numero);
+            return "<span style='color:red;'>No se encontró estudiante con número: " + numero + "</span>";
         }
-        return estudiante;
+        return "<span style='color:blue;'>" + estudiante.toString() + "</span>";
     }
 
-    public boolean eliminarEstudiante(int numero) {
+    public String eliminarEstudiante(int numero) {
         if (!estudiantes.containsKey(numero)) {
-            System.out.println("Error: No existe estudiante con número " + numero);
-            return false;
+            return "<span style='color:red;'>Error: No existe estudiante con número " + numero + "</span>";
         }
-
         Estudiante eliminado = estudiantes.remove(numero);
-        System.out.println("✓ Estudiante eliminado: " + eliminado.getNombre());
-        return true;
+        return "<span style='color:orange;'>&#10003; Estudiante eliminado: " + eliminado.getNombre() + "</span>";
     }
 
     // --- MÉTODOS DE MOSTRAR INFORMACIÓN ---
-    public void mostrarEstudiantes() {
-        System.out.println("\n=== LISTA DE ESTUDIANTES ===");
+    public String mostrarEstudiantes() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<b>=== LISTA DE ESTUDIANTES ===</b><br>");
         if (estudiantes.isEmpty()) {
-            System.out.println("No hay estudiantes registrados.");
+            sb.append("No hay estudiantes registrados.<br>");
         } else {
             for (Estudiante est : estudiantes.values()) {
-                System.out.println("  " + est);
+                sb.append(est.toString()).append("<br>");
             }
         }
-        System.out.println("Total: " + estudiantes.size() + " estudiantes");
+        sb.append("Total: ").append(estudiantes.size()).append(" estudiantes");
+        return sb.toString();
     }
 
-    public void mostrarCursos() {
-        System.out.println("\n=== LISTA DE CURSOS ===");
+    public String mostrarCursos() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<b>=== LISTA DE CURSOS ===</b><br>");
         if (cursos.isEmpty()) {
-            System.out.println("No hay cursos registrados.");
+            sb.append("No hay cursos registrados.<br>");
         } else {
             for (Curso curso : cursos.values()) {
-                System.out.println("  " + curso);
+                sb.append(curso.toString()).append("<br>");
             }
         }
-        System.out.println("Total: " + cursos.size() + " cursos");
+        sb.append("Total: ").append(cursos.size()).append(" cursos");
+        return sb.toString();
     }
 
     // --- GETTERS PARA EL SISTEMA ---
