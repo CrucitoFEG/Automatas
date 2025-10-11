@@ -1,0 +1,10 @@
+CURSO(1,MATE);
+CURSO(2,FISICA);
+ESTUDIANTE(1,JOSE,1);
+ESTUDIANTE(2,PEDRO,1);
+CURSO(3,estadistica);
+ESTUDIANTE(3,jo,2);
+Buscar_estudiante(1);
+Eliminar_estudiante(2);
+Mostrar_estudiante();
+mostrar_curso();
