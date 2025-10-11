@@ -1,4 +1,4 @@
-package org.project.util;
+package util;
 
 import javax.swing.*;
 import java.io.*;

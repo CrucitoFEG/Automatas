@@ -1,4 +1,4 @@
-package org.project.modelo;
+package modelo;
 
 public class Estudiante {
 

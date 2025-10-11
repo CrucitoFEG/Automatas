@@ -1,7 +1,7 @@
-package org.project.analizador.sintactico;
+package analizador.sintactico;
 
-import org.project.analizador.lexico.Token;
-import org.project.analizador.lexico.TipoToken;
+import analizador.lexico.Token;
+import analizador.lexico.TipoToken;
 import  java.util.*;
 
 public class AnalizadorSintactico {

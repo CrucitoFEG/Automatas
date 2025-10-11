@@ -1,6 +1,6 @@
-package org.project.sistema;
+package sistema;
 
-import org.project.modelo.*;
+import modelo.*;
 import java.util.*;
 
 public class SistemaAcademico {

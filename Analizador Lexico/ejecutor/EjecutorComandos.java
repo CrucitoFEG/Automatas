@@ -1,8 +1,8 @@
-package org.project.ejecutor;
+package ejecutor;
 
-import org.project.sistema.SistemaAcademico;
-import org.project.analizador.lexico.Token;
-import org.project.analizador.lexico.TipoToken;
+import sistema.SistemaAcademico;
+import analizador.lexico.Token;
+import analizador.lexico.TipoToken;
 import java.util.*;
 
 public class EjecutorComandos {

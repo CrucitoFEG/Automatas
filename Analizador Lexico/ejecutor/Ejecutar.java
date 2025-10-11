@@ -1,9 +1,9 @@
-package org.project.ejecutor;
+package ejecutor;
 
-import org.project.analizador.lexico.AnalizadorLexico;
-import org.project.analizador.lexico.Token;
-import org.project.analizador.sintactico.AnalizadorSintactico;
-import org.project.sistema.SistemaAcademico;
+import analizador.lexico.AnalizadorLexico;
+import analizador.lexico.Token;
+import analizador.sintactico.AnalizadorSintactico;
+import sistema.SistemaAcademico;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package org.project.UI;
+package UI;
 
-import org.project.analizador.lexico.AnalizadorLexico;
-import org.project.analizador.lexico.Token;
-import org.project.analizador.sintactico.AnalizadorSintactico;
-import org.project.util.FileManager;
+import analizador.lexico.AnalizadorLexico;
+import analizador.lexico.Token;
+import analizador.sintactico.AnalizadorSintactico;
+import util.FileManager;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -41,7 +41,7 @@ public class InterfazGrafica extends JFrame {
         panelBotones.add(btnParticipantes);
 
         // Panel derecho con logo
-        JLabel logo = new JLabel(new ImageIcon("logo.png")); // Asegúrate que logo.png sea 100x100
+    JLabel logo = new JLabel(new ImageIcon("UI/logo.png")); // Asegúrate que logo.png sea 100x100
         JPanel panelLogo = new JPanel(new BorderLayout());
         panelLogo.setBackground(Color.WHITE);
         panelLogo.add(logo, BorderLayout.EAST);
@@ -112,16 +112,15 @@ public class InterfazGrafica extends JFrame {
     }
 
     private void mostrarParticipantes(ActionEvent e) {
-        String participantes = """
-                🧑‍💻 Participantes del Grupo:
-                ----------------------------------------
-                Carnet           Nombre
-                7690-23-5339     Cruz Francisco Estrada Gregorio
-                7690-23-25069    Brandon Tomas Morales Ixcoy
-                7690-23-22940    Nery Geovany Osorio Tecu
-                7690-18-24917    José Fernando Pérez Sipaque
-                7690-15-3698     Kevin Rai Salazar Pérez
-                """;
+        String participantes =
+                "🧑‍💻 Participantes del Grupo:\n" +
+                "----------------------------------------\n" +
+                "Carnet           Nombre\n" +
+                "7690-23-5339     Cruz Francisco Estrada Gregorio\n" +
+                "7690-23-25069    Brandon Tomas Morales Ixcoy\n" +
+                "7690-23-22940    Nery Geovany Osorio Tecu\n" +
+                "7690-18-24917    José Fernando Pérez Sipaque\n" +
+                "7690-15-3698     Kevin Rai Salazar Pérez\n";
         areaResultado.setText(participantes);
         etiquetaEstado.setText("Mostrando participantes.");
     }
