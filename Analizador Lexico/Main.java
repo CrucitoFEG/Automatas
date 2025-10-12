@@ -6,8 +6,6 @@ import java.io.IOException;
 
 import javax.swing.*;
 
-import static util.FileManager.cargarArchivo;
-
 public class Main {
     public static void main(String[] args) {
         if (!GraphicsEnvironment.isHeadless()) {
