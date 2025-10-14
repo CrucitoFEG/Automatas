@@ -8,3 +8,65 @@ Buscar_estudiante(1);
 Eliminar_estudiante(2);
 Mostrar_estudiante();
 mostrar_curso();
+CURSO(4,KAKCHIKEL);
+Eliminar_estudiante(1);
+mostrar_curso();
+
+--- ANALISIS ---
+
+  
+    
+  
+  
+    Tokens detectados:Linea 1: CURSO -&gt; 'CURSO'Linea 1: 
+    PARENTESIS_IZQ -&gt; '('Linea 1: NUMERO -&gt; '1'Linea 1: COMA -&gt; 
+    ','Linea 1: TEXTO -&gt; 'MATE'Linea 1: PARENTESIS_DER -&gt; ')'Linea 
+    1: PUNTO_COMA -&gt; ';'Linea 2: CURSO -&gt; 'CURSO'Linea 2: 
+    PARENTESIS_IZQ -&gt; '('Linea 2: NUMERO -&gt; '2'Linea 2: COMA -&gt; 
+    ','Linea 2: TEXTO -&gt; 'FISICA'Linea 2: PARENTESIS_DER -&gt; ')'Linea 
+    2: PUNTO_COMA -&gt; ';'Linea 3: ESTUDIANTE -&gt; 'ESTUDIANTE'Linea 
+    3: PARENTESIS_IZQ -&gt; '('Linea 3: NUMERO -&gt; '1'Linea 3: COMA 
+    -&gt; ','Linea 3: TEXTO -&gt; 'JOSE'Linea 3: COMA -&gt; ','Linea 
+    3: NUMERO -&gt; '1'Linea 3: PARENTESIS_DER -&gt; ')'Linea 3: 
+    PUNTO_COMA -&gt; ';'Linea 4: ESTUDIANTE -&gt; 'ESTUDIANTE'Linea 4: 
+    PARENTESIS_IZQ -&gt; '('Linea 4: NUMERO -&gt; '2'Linea 4: COMA -&gt; 
+    ','Linea 4: TEXTO -&gt; 'PEDRO'Linea 4: COMA -&gt; ','Linea 4: 
+    NUMERO -&gt; '1'Linea 4: PARENTESIS_DER -&gt; ')'Linea 4: 
+    PUNTO_COMA -&gt; ';'Linea 5: CURSO -&gt; 'CURSO'Linea 5: 
+    PARENTESIS_IZQ -&gt; '('Linea 5: NUMERO -&gt; '3'Linea 5: COMA -&gt; 
+    ','Linea 5: TEXTO -&gt; 'estadistica'Linea 5: PARENTESIS_DER -&gt; ')'Linea 
+    5: PUNTO_COMA -&gt; ';'Linea 6: ESTUDIANTE -&gt; 'ESTUDIANTE'Linea 
+    6: PARENTESIS_IZQ -&gt; '('Linea 6: NUMERO -&gt; '3'Linea 6: COMA 
+    -&gt; ','Linea 6: TEXTO -&gt; 'jo'Linea 6: COMA -&gt; ','Linea 
+    6: NUMERO -&gt; '2'Linea 6: PARENTESIS_DER -&gt; ')'Linea 6: 
+    PUNTO_COMA -&gt; ';'Linea 7: BUSCAR_ESTUDIANTE -&gt; 'Buscar_estudiante'Linea 
+    7: PARENTESIS_IZQ -&gt; '('Linea 7: NUMERO -&gt; '1'Linea 7: 
+    PARENTESIS_DER -&gt; ')'Linea 7: PUNTO_COMA -&gt; ';'Linea 8: 
+    ELIMINAR_ESTUDIANTE -&gt; 'Eliminar_estudiante'Linea 8: PARENTESIS_IZQ 
+    -&gt; '('Linea 8: NUMERO -&gt; '2'Linea 8: PARENTESIS_DER -&gt; ')'Linea 
+    8: PUNTO_COMA -&gt; ';'Linea 9: MOSTRAR_ESTUDIANTE -&gt; 
+    'Mostrar_estudiante'Linea 9: PARENTESIS_IZQ -&gt; '('Linea 9: 
+    PARENTESIS_DER -&gt; ')'Linea 9: PUNTO_COMA -&gt; ';'Linea 10: 
+    MOSTRAR_CURSO -&gt; 'mostrar_curso'Linea 10: PARENTESIS_IZQ -&gt; '('Linea 
+    10: PARENTESIS_DER -&gt; ')'Linea 10: PUNTO_COMA -&gt; ';'Linea 
+    11: CURSO -&gt; 'CURSO'Linea 11: PARENTESIS_IZQ -&gt; '('Linea 11: 
+    NUMERO -&gt; '4'Linea 11: COMA -&gt; ','Linea 11: TEXTO -&gt; 
+    'KAKCHIKEL'Linea 11: PARENTESIS_DER -&gt; ')'Linea 11: PUNTO_COMA 
+    -&gt; ';'Linea 12: ELIMINAR_ESTUDIANTE -&gt; 'Eliminar_estudiante'Linea 
+    12: PARENTESIS_IZQ -&gt; '('Linea 12: NUMERO -&gt; '1'Linea 12: 
+    PARENTESIS_DER -&gt; ')'Linea 12: PUNTO_COMA -&gt; ';'Linea 13: 
+    MOSTRAR_CURSO -&gt; 'mostrar_curso'Linea 13: PARENTESIS_IZQ -&gt; '('Linea 
+    13: PARENTESIS_DER -&gt; ')'Linea 13: PUNTO_COMA -&gt; ';'Linea 
+    13: EOF -&gt; ''&#10003; Estructura v&#225;lidaError: 
+    Ya existe un curso con n&#250;mero 1Error: 
+    Ya existe un curso con n&#250;mero 2&#10003; 
+    Estudiante creado: JOSE (#1)&#10003; 
+    Estudiante creado: PEDRO (#2)Error: 
+    Ya existe un curso con n&#250;mero 3Error: 
+    Ya existe un estudiante con n&#250;mero 3Estudiante 
+    #1: JOSE (Curso: 1)&#10003; 
+    Estudiante eliminado: PEDROError: 
+    Ya existe un curso con n&#250;mero 4&#10003; 
+    Estudiante eliminado: JOSE
+  
+

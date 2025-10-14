@@ -8,3 +8,69 @@ Buscar_estudiante(1);
 Eliminar_estudiante(2);
 Mostrar_estudiante();
 mostrar_curso();
+participantes();
+
+
+--- ANALISIS ---
+
+  
+    
+  
+  
+    Tokens detectados:Linea 1: PARTICIPANTES -&gt; 'participantes'Linea 
+    1: PARENTESIS_IZQ -&gt; '('Linea 1: PARENTESIS_DER -&gt; ')'Linea 
+    1: PUNTO_COMA -&gt; ';'Linea 1: EOF -&gt; ''&#10003; 
+    Estructura v&#225;lidaParticipantes:
+
+    
+      
+        
+          Carnet
+        
+        
+          Nombre
+        
+      
+      
+        
+          7690-23-5339
+        
+        
+          Cruz Francisco Estrada Gregorio
+        
+      
+      
+        
+          7690-23-25069
+        
+        
+          Brandon Tomas Morales Ixcoy
+        
+      
+      
+        
+          7690-23-22940
+        
+        
+          Nery Geovany Osorio Tecu
+        
+      
+      
+        
+          7690-18-24917
+        
+        
+          Jos&#233; Fernando P&#233;rez Sipaque
+        
+      
+      
+        
+          7690-15-3698
+        
+        
+          Kevin Rai Salazar P&#233;rez
+        
+      
+    
+  
+

@@ -8,6 +8,10 @@ public enum TipoToken {
     ELIMINAR_ESTUDIANTE,
     MOSTRAR_ESTUDIANTE,
     MOSTRAR_CURSO,
+    MOSTRAR_ESTUDIANTE_ID,
+    MOSTRAR_CURSO_ID,
+    ELIMINAR_CURSO,
+    PARTICIPANTES,
 
     //Tipos de datos
     NUMERO,
@@ -20,6 +24,6 @@ public enum TipoToken {
     PUNTO_COMA,
 
     //FINAL DE ARCHIVO
-    EOF
+    EOF, BUSCAR_CURSO
 
 }

@@ -83,12 +83,22 @@ public class AnalizadorLexico {
                 return "(?i)ESTUDIANTE";
             case BUSCAR_ESTUDIANTE:
                 return "(?i)Buscar_estudiante";
+            case BUSCAR_CURSO:
+                return "(?i)BUSCAR_CURSO";
             case ELIMINAR_ESTUDIANTE:
                 return "(?i)Eliminar_estudiante";
             case MOSTRAR_ESTUDIANTE:
                 return "(?i)Mostrar_estudiante";
             case MOSTRAR_CURSO:
                 return "(?i)Mostrar_curso";
+            case MOSTRAR_ESTUDIANTE_ID:
+                return "(?i)Mostrar_estudiante";
+            case MOSTRAR_CURSO_ID:
+                return "(?i)Mostrar_curso";
+            case ELIMINAR_CURSO:
+                return "(?i)Eliminar_curso";
+            case PARTICIPANTES:
+                return "(?i)PARTICIPANTES";
             case NUMERO:
                 return "\\d+";
             case TEXTO:

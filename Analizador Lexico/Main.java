@@ -39,20 +39,14 @@ public class Main {
 
             String contenido = new String(Files.readAllBytes(archivo));
             System.out.println("Contenido del archivo de prueba:\n" + contenido + "\n");
+
             ejecutar.probarSistemaCompleto(contenido);
+
         } catch (IOException e) {
             System.err.println("No se pudo leer el archivo de prueba: " + e.getMessage());
             System.err.println("Ubicación esperada: Texto de prueba/ArchivoCorrecto.txt");
         }
-//        Ejecutar ejecutar = new Ejecutar();
-//
-//        System.out.println("PRUEBA DEL SISTEMA ACADÉMICO\n");
-//        //Carga archivo y lee el archivo
-//        String contenido = cargarArchivo();
-//        System.out.println("Contenido del archvio: "+contenido);
-//        //Probar sistema completo
-//        ejecutar.probarSistemaCompleto(contenido);
-    }
 
+    }
 
 }

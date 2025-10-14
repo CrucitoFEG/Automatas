@@ -26,6 +26,14 @@ public class SistemaAcademico {
         return cursos.get(numero);
     }
 
+    public String buscarCursoString(int numero) {
+        Curso curso = cursos.get(numero);
+        if (curso == null) {
+            return "<span style='color:red;'>No se encontró curso con número: " + numero + "</span>";
+        }
+        return "<span style='color:blue;'>" + curso.toString() + "</span>";
+    }
+
     // --- OPERACIONES CON ESTUDIANTES ---
     public String crearEstudiante(int numero, String nombre, int numeroCurso) {
         if (estudiantes.containsKey(numero)) {
@@ -90,5 +98,13 @@ public class SistemaAcademico {
 
     public Map<Integer, Estudiante> getEstudiantes() {
         return new HashMap<>(estudiantes);
+    }
+
+    public String eliminarCurso(int num) {
+        if (!cursos.containsKey(num)) {
+            return "<span style='color:red;'>Error: No existe curso con número " + num + "</span>";
+        }
+        Curso eliminado = cursos.remove(num);
+        return "<span style='color:orange;'>&#10003; Curso eliminado: " + eliminado.getNombre() + "</span>";
     }
 }

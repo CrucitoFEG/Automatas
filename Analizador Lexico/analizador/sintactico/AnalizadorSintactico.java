@@ -1,3 +1,41 @@
+    // // PARTICIPANTES();
+    // private boolean validarParticipantes() {
+    //     consumir(TipoToken.PARTICIPANTES, "Se esperaba 'PARTICIPANTES'");
+    //     consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de PARTICIPANTES");
+    //     consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después de PARTICIPANTES");
+    //     consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+    //     return true;
+    // }
+
+    // // MOSTRAR_ESTUDIANTE(num);
+    // private boolean validarMostrarEstudianteId() {
+    //     consumir(TipoToken.MOSTRAR_ESTUDIANTE_ID, "Se esperaba 'Mostrar_estudiante'");
+    //     consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Mostrar_estudiante");
+    //     consumir(TipoToken.NUMERO, "Se esperaba número de estudiante");
+    //     consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+    //     consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+    //     return true;
+    // }
+
+    // // MOSTRAR_CURSO(num);
+    // private boolean validarMostrarCursoId() {
+    //     consumir(TipoToken.MOSTRAR_CURSO_ID, "Se esperaba 'Mostrar_curso'");
+    //     consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Mostrar_curso");
+    //     consumir(TipoToken.NUMERO, "Se esperaba número de curso");
+    //     consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+    //     consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+    //     return true;
+    // }
+
+    // // ELIMINAR_CURSO(num);
+    // private boolean validarEliminarCurso() {
+    //     consumir(TipoToken.ELIMINAR_CURSO, "Se esperaba 'Eliminar_curso'");
+    //     consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Eliminar_curso");
+    //     consumir(TipoToken.NUMERO, "Se esperaba número de curso");
+    //     consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+    //     consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+    //     return true;
+    // }
 package analizador.sintactico;
 
 import analizador.lexico.Token;
@@ -38,17 +76,76 @@ public class AnalizadorSintactico {
             return validarCrearEstudiante();
         } else if (coincide(TipoToken.BUSCAR_ESTUDIANTE)) {
             return validarBuscarEstudiante();
+        } else if (coincide(TipoToken.BUSCAR_CURSO)) {
+            return validarBuscarCurso();
         } else if (coincide(TipoToken.ELIMINAR_ESTUDIANTE)) {
             return validarEliminarEstudiante();
         } else if (coincide(TipoToken.MOSTRAR_ESTUDIANTE)) {
             return validarMostrarEstudiante();
         } else if (coincide(TipoToken.MOSTRAR_CURSO)) {
             return validarMostrarCurso();
+        } else if (coincide(TipoToken.MOSTRAR_ESTUDIANTE_ID)) {
+            return validarMostrarEstudianteId();
+        } else if (coincide(TipoToken.MOSTRAR_CURSO_ID)) {
+            return validarMostrarCursoId();
+        } else if (coincide(TipoToken.ELIMINAR_CURSO)) {
+            return validarEliminarCurso();
+        } else if (coincide(TipoToken.PARTICIPANTES)) {
+            return validarParticipantes();
         } else {
             errorSintactico("Se esperaba un comando válido");
             return false;
         }
     }
+    // BUSCAR_CURSO(num);
+    private boolean validarBuscarCurso() {
+        consumir(TipoToken.BUSCAR_CURSO, "Se esperaba 'BUSCAR_CURSO'");
+        consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de BUSCAR_CURSO");
+        consumir(TipoToken.NUMERO, "Se esperaba número de curso");
+        consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+        consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+        return true;
+    }
+    
+    // PARTICIPANTES();
+    private boolean validarParticipantes() {
+        consumir(TipoToken.PARTICIPANTES, "Se esperaba 'PARTICIPANTES'");
+        consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de PARTICIPANTES");
+        consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después de PARTICIPANTES");
+        consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+        return true;
+    }
+
+    // MOSTRAR_ESTUDIANTE(num);
+    private boolean validarMostrarEstudianteId() {
+        consumir(TipoToken.MOSTRAR_ESTUDIANTE_ID, "Se esperaba 'Mostrar_estudiante'");
+        consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Mostrar_estudiante");
+        consumir(TipoToken.NUMERO, "Se esperaba número de estudiante");
+        consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+        consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+        return true;
+    }
+
+    // MOSTRAR_CURSO(num);
+    private boolean validarMostrarCursoId() {
+        consumir(TipoToken.MOSTRAR_CURSO_ID, "Se esperaba 'Mostrar_curso'");
+        consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Mostrar_curso");
+        consumir(TipoToken.NUMERO, "Se esperaba número de curso");
+        consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+        consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+        return true;
+    }
+
+    // ELIMINAR_CURSO(num);
+    private boolean validarEliminarCurso() {
+        consumir(TipoToken.ELIMINAR_CURSO, "Se esperaba 'Eliminar_curso'");
+        consumir(TipoToken.PARENTESIS_IZQ, "Se esperaba '(' después de Eliminar_curso");
+        consumir(TipoToken.NUMERO, "Se esperaba número de curso");
+        consumir(TipoToken.PARENTESIS_DER, "Se esperaba ')' después del número");
+        consumir(TipoToken.PUNTO_COMA, "Se esperaba ';' al final del comando");
+        return true;
+    }
+    
 
     private boolean validarCrearCurso() {
         // CURSO ( NUMERO , TEXTO ) ;
